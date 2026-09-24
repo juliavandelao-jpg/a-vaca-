@@ -1,65 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
 :root {
-    --cor-fundo: #1B2E1E;
-    --cor-principal: #3E2723;
-    --cor-secundaria: #4E342E;
-    --cor-destaque: #81C784;
-    --cor-texto: #E8F5E9;
+    --cor-fundo: #2D4A22;       /* Verde folha / floresta escuro */
+    --cor-principal: #3D2B1F;   /* Marrom madeira / cerca de madeira */
+    --cor-secundaria: #5C4033;  /* Marrom terra médio */
+    --cor-destaque: #80C242;    /* Verde pasto vibrante */
+    --cor-texto: #F5EBE6;       /* Creme / bege suave */
 }
-  
+
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
 }
 
-.caixa-principal{
+.caixa-principal {
     background-color: var(--cor-principal);
     width: 90%;
     max-width: 600px;
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border: 3px solid var(--cor-secundaria);
 }
 
-h1, .caixa-perguntas, .caixa-resultado{
-    font-family: 'Chakra Petch', sans-serif;
+h1, .caixa-perguntas, .caixa-resultado {
+    font-family: 'Fredoka', sans-serif;
 }
 
 h1 {
     color: var(--cor-destaque);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.caixa-perguntas {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 button {
     background-color: var(--cor-secundaria);
     color: var(--cor-texto);
-    border: none;
+    border: 2px solid var(--cor-destaque);
     border-radius: 15px;
-    padding: 15px;
+    padding: 15px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-principal);
+    transform: translateY(-2px);
 }
 
-.caixa-resultado{
+.caixa-resultado {
     display: none;
 }
 
-.caixa-resultado.mostrar{
+.caixa-resultado.mostrar {
     display: block;
 }
 
-.caixa-alternativas{
+.caixa-alternativas {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
